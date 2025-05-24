@@ -37,10 +37,11 @@ const App = () => {
           <Route path='/kasilethuclient/cart' element={<CartPage />} />
           <Route path='/kasilethuclient/add-address' element={<AddressPage />} />
           <Route path='/kasilethuclient/my-orders' element={<MyOrders />} />
-          <Route path='/kasilethuclient/seller' element={isSeller ? <SellerLayout /> : <SellerLogin />} >
+		  
+          <Route path='/seller' element={isSeller ? <SellerLayout /> : <SellerLogin />} >
             <Route index element={isSeller ? <SellerAddProduct /> : null} />
-            <Route path='/kasilethuclient/product-list' element={<SellerProductList />} />
-            <Route path='/kasilethuclient/orders' element={<SellerOrders />} />
+            <Route path='/product-list' element={<SellerProductList />} />
+            <Route path='/orders' element={<SellerOrders />} />
           </Route>
         </Routes>
       </div>
