@@ -29,7 +29,7 @@ const App = () => {
       {showUserLogin ? <Login /> : null}
       <Toaster />
       <div className={'${isSellerPath ? "" : "px-6 md:px-16 lg:px-24 xl:px-32"}'}>
-        <Routes>
+        <Routes basename='/kasilethuclient'>
           <Route path='/' element={<HomePage />} />
 		      <Route path='/products' element={<AllProducts />} />
           <Route path='/products/:category' element={<ProductCategory />} />
