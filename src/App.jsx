@@ -25,22 +25,22 @@ const App = () => {
   return (
     <div className='text-default min-h-screen text-gray-700 bg-white'>
 	  
-	    {isSellerPath ? null : <NavBar />}
+	  {isSellerPath ? null : <NavBar />}
       {showUserLogin ? <Login /> : null}
       <Toaster />
       <div className={'${isSellerPath ? "" : "px-6 md:px-16 lg:px-24 xl:px-32"}'}>
-        <Routes basename='/kasilethuclient'>
-          <Route path='/' element={<HomePage />} />
-		      <Route path='/products' element={<AllProducts />} />
-          <Route path='/products/:category' element={<ProductCategory />} />
-          <Route path='/products/:category/:id' element={<DetailedProduct />} />
-          <Route path='/cart' element={<CartPage />} />
-          <Route path='/add-address' element={<AddressPage />} />
-          <Route path='/my-orders' element={<MyOrders />} />
-          <Route path='/seller' element={isSeller ? <SellerLayout /> : <SellerLogin />} >
+        <Routes >
+          <Route path='//kasilethuclient' element={<HomePage />} />
+		      <Route path='/kasilethuclient/products' element={<AllProducts />} />
+          <Route path='/kasilethuclient/products/:category' element={<ProductCategory />} />
+          <Route path='/kasilethuclient/products/:category/:id' element={<DetailedProduct />} />
+          <Route path='/kasilethuclient/cart' element={<CartPage />} />
+          <Route path='/kasilethuclient/add-address' element={<AddressPage />} />
+          <Route path='/kasilethuclient/my-orders' element={<MyOrders />} />
+          <Route path='/kasilethuclient/seller' element={isSeller ? <SellerLayout /> : <SellerLogin />} >
             <Route index element={isSeller ? <SellerAddProduct /> : null} />
-            <Route path='product-list' element={<SellerProductList />} />
-            <Route path='orders' element={<SellerOrders />} />
+            <Route path='/kasilethuclient/product-list' element={<SellerProductList />} />
+            <Route path='/kasilethuclient/orders' element={<SellerOrders />} />
           </Route>
         </Routes>
       </div>

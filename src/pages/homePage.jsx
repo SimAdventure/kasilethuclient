@@ -8,7 +8,7 @@ import Best_Seller from '../components/best_Seller'
 const HomePage = () => {
   return (
     <div className='mt-10'>
-        <MainBanner />
+        <MainBanner className='mt-15' />
         <Categories />
         <Best_Seller />
         <BottomBanner />
