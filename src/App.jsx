@@ -31,7 +31,7 @@ const App = () => {
       <div className={'${isSellerPath ? "" : "px-6 md:px-16 lg:px-24 xl:px-32"}'}>
         <Routes >
           <Route path='/' element={<HomePage />} />
-		      <Route path='/kasilethuclient/products' element={<AllProducts />} />
+		      <Route path='/products' element={<AllProducts />} />
           <Route path='/products/:category' element={<ProductCategory />} />
           <Route path='/products/:category/:id' element={<DetailedProduct />} />
           <Route path='/cart' element={<CartPage />} />
