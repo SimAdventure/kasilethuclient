@@ -30,13 +30,13 @@ const App = () => {
       <Toaster />
       <div className={'${isSellerPath ? "" : "px-6 md:px-16 lg:px-24 xl:px-32"}'}>
         <Routes >
-          <Route path='//kasilethuclient' element={<HomePage />} />
+          <Route path='/' element={<HomePage />} />
 		      <Route path='/kasilethuclient/products' element={<AllProducts />} />
-          <Route path='/kasilethuclient/products/:category' element={<ProductCategory />} />
-          <Route path='/kasilethuclient/products/:category/:id' element={<DetailedProduct />} />
-          <Route path='/kasilethuclient/cart' element={<CartPage />} />
-          <Route path='/kasilethuclient/add-address' element={<AddressPage />} />
-          <Route path='/kasilethuclient/my-orders' element={<MyOrders />} />
+          <Route path='/products/:category' element={<ProductCategory />} />
+          <Route path='/products/:category/:id' element={<DetailedProduct />} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='/add-address' element={<AddressPage />} />
+          <Route path='my-orders' element={<MyOrders />} />
 		  
           <Route path='/seller' element={isSeller ? <SellerLayout /> : <SellerLogin />} >
             <Route index element={isSeller ? <SellerAddProduct /> : null} />
